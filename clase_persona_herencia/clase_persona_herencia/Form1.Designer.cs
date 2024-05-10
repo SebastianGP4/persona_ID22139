@@ -50,6 +50,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.es_persona = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tres_opciones.SuspendLayout();
             this.informacion.SuspendLayout();
@@ -65,6 +66,7 @@
             // 
             // tres_opciones
             // 
+            this.tres_opciones.Controls.Add(this.es_persona);
             this.tres_opciones.Controls.Add(this.validar);
             this.tres_opciones.Controls.Add(this.es_un_docente);
             this.tres_opciones.Controls.Add(this.es_alumno);
@@ -79,7 +81,7 @@
             // 
             this.validar.BackColor = System.Drawing.Color.Lime;
             this.validar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.validar.Location = new System.Drawing.Point(45, 169);
+            this.validar.Location = new System.Drawing.Point(47, 190);
             this.validar.Name = "validar";
             this.validar.Size = new System.Drawing.Size(138, 67);
             this.validar.TabIndex = 3;
@@ -289,6 +291,19 @@
             this.label1.Text = "Nombre completo";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // es_persona
+            // 
+            this.es_persona.AutoSize = true;
+            this.es_persona.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.es_persona.Location = new System.Drawing.Point(7, 137);
+            this.es_persona.Name = "es_persona";
+            this.es_persona.Size = new System.Drawing.Size(211, 33);
+            this.es_persona.TabIndex = 4;
+            this.es_persona.TabStop = true;
+            this.es_persona.Text = "Soy una persona";
+            this.es_persona.UseVisualStyleBackColor = true;
+            this.es_persona.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged_1);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -333,6 +348,7 @@
         private System.Windows.Forms.Button salir;
         private System.Windows.Forms.Button limpiarinfo;
         private System.Windows.Forms.Button guardar;
+        private System.Windows.Forms.RadioButton es_persona;
     }
 }
 

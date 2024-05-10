@@ -8,3 +8,13 @@ C:\Users\LENOVO\Documents\DASC\Semestre 4\Programación orientada a objetos 2\PO
 C:\Users\LENOVO\Documents\DASC\Semestre 4\Programación orientada a objetos 2\POOM2_SGP\clase_persona_herencia\clase_persona_herencia\obj\Debug\clase_persona_herencia.csproj.CoreCompileInputs.cache
 C:\Users\LENOVO\Documents\DASC\Semestre 4\Programación orientada a objetos 2\POOM2_SGP\clase_persona_herencia\clase_persona_herencia\obj\Debug\clase_persona_herencia.exe
 C:\Users\LENOVO\Documents\DASC\Semestre 4\Programación orientada a objetos 2\POOM2_SGP\clase_persona_herencia\clase_persona_herencia\obj\Debug\clase_persona_herencia.pdb
+C:\Users\LENOVO\Source\Repos\SebastianGP4\persona_ID22139\clase_persona_herencia\clase_persona_herencia\obj\Debug\clase_persona_herencia.csproj.AssemblyReference.cache
+C:\Users\LENOVO\Source\Repos\SebastianGP4\persona_ID22139\clase_persona_herencia\clase_persona_herencia\obj\Debug\clase_persona_herencia.Form1.resources
+C:\Users\LENOVO\Source\Repos\SebastianGP4\persona_ID22139\clase_persona_herencia\clase_persona_herencia\obj\Debug\clase_persona_herencia.Properties.Resources.resources
+C:\Users\LENOVO\Source\Repos\SebastianGP4\persona_ID22139\clase_persona_herencia\clase_persona_herencia\obj\Debug\clase_persona_herencia.csproj.GenerateResource.cache
+C:\Users\LENOVO\Source\Repos\SebastianGP4\persona_ID22139\clase_persona_herencia\clase_persona_herencia\obj\Debug\clase_persona_herencia.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\Source\Repos\SebastianGP4\persona_ID22139\clase_persona_herencia\clase_persona_herencia\obj\Debug\clase_persona_herencia.exe
+C:\Users\LENOVO\Source\Repos\SebastianGP4\persona_ID22139\clase_persona_herencia\clase_persona_herencia\obj\Debug\clase_persona_herencia.pdb
+C:\Users\LENOVO\Source\Repos\SebastianGP4\persona_ID22139\clase_persona_herencia\clase_persona_herencia\bin\Debug\clase_persona_herencia.exe.config
+C:\Users\LENOVO\Source\Repos\SebastianGP4\persona_ID22139\clase_persona_herencia\clase_persona_herencia\bin\Debug\clase_persona_herencia.exe
+C:\Users\LENOVO\Source\Repos\SebastianGP4\persona_ID22139\clase_persona_herencia\clase_persona_herencia\bin\Debug\clase_persona_herencia.pdb
