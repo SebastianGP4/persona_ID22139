@@ -7,86 +7,123 @@ using System.Windows.Forms;
 
 namespace persona_herencia
 {
-    class Persona //La clase persona es la clase padre
+    class Persona
+    { //cuando una persona se crea desde 0 unicamente tiene
+        protected int edad; //caja que guarda edad
+        protected string nombre;//caja que guarda nombre
+        protected string fechanac;//caja que guarda fecha de nacimiento
+
+        public int Edad //CAJA DE MEMORIA edad
+        {
+            get { return edad; } //vamos por el valor
+                                 //de la caja de texto
+            set { edad = value; }//lo guardamos en memoria
+        }
+        public string Fechanac //CAJA DE MEMORIA fechanacimiento
+        {
+            get { return fechanac; } //vamos por el valor
+                                     //de la caja de texto
+            set { fechanac = value; }//lo guardamos en memoria
+        }
+        public string Nombre //CAJA DE MEMORIA nombre
+        {
+            get { return nombre; } //vamos por el valor
+                                   //de la caja de texto
+            set { nombre = value; }//lo guardamos en memoria
+        }
+        //constructor de estructura persona
+        /* public Persona (string nombre, int edad, string fechanac)
+         {
+             Nombre = nombre;
+             Edad = edad;
+             Fechanac = fechanac;
+         }*/
+    }
+
+    class Alumno : Persona
     {
-        public string Nombre //Se crean los atributos de la persona
+        protected int matricula;
+        protected string carrera;
+        public int Matricula //CAJA DE MEMORIA edad
         {
-            get { return Nombre; }
-            set { Nombre = value; } 
+            get { return matricula; } //vamos por el valor
+                                      //de la caja de texto
+            set { matricula = value; }//lo guardamos en memoria
         }
-        public string Edad
+        public string Carrera //CAJA DE MEMORIA fechanacimiento
         {
-            get { return Edad; }
-            set { Edad = value; } 
+            get { return carrera; } //vamos por el valor
+                                    //de la caja de texto
+            set { carrera = value; }//lo guardamos en memoria
         }
-        public string Fechadenacimiento
-        {
-            get { return Fechadenacimiento; }
-            set { Fechadenacimiento = value; } 
-        }
-        public Persona(string nombre, string fechadenacimiento, string edad) //Se crean las variables generales y sus atributos de la persona
+        public Alumno(string nombre, int edad, string fechanac, string carrera, int matricula)
         {
             Nombre = nombre;
             Edad = edad;
-            Fechadenacimiento = fechadenacimiento;
-        }
-    }
-    class Alumno : Persona //Se crea una clase hija, en este caso la clase se trata sobre alumnos 
-    {
-        public string Matricula //Se crean los atributos que debe tener un alumno
-        {
-            get { return Matricula; }
-            set { Matricula = value; } 
-        }
-        public string Carrera
-        {
-            get { return Carrera; }
-            set { Carrera = value; }
-        }
-        public Alumno(string nombre, string edad, string fechadenacimiento, string matricula, string carrera) : base(nombre, edad, fechadenacimiento) //Se crean las variables generales y sus atributos de la persona
-        {
-            Matricula = matricula;
+            Fechanac = fechanac;
             Carrera = carrera;
+            Matricula = matricula;
         }
+
     }
-    class Empleado : Persona //Se crea otra clase hija, en este caso la clase se trata sobre empleados
+
+    class Empleado : Persona
     {
-        public string Puesto //Se crean los atributos que debe tener un empleado
+        protected float sueldo;
+        protected string puesto;
+        public float Sueldo //CAJA DE MEMORIA edad
         {
-            get { return Puesto; }
-            set { Puesto = value; }
+            get { return sueldo; } //vamos por el valor
+                                   //de la caja de texto
+            set { sueldo = value; }//lo guardamos en memoria
         }
-        public string Sueldoe 
+        public string Puesto //CAJA DE MEMORIA fechanacimiento
         {
-            get { return Sueldoe; }
-            set { Sueldoe = value; }
+            get { return puesto; } //vamos por el valor
+                                   //de la caja de texto
+            set { puesto = value; }//lo guardamos en memoria
         }
-        public Empleado(string nombre, string edad, string fechadenacimiento, string sueldoe, string puesto) : base(nombre, edad, fechadenacimiento) //Se crean las variables para que la persona sea un empleado, ademas de juntar sus variables generales las cuales son su nombre, edad, fecha de nacimiento y sueldo
+
+        public Empleado(string nombre, int edad, string fechanac, string puesto, float sueldo)
         {
+            Nombre = nombre;
+            Edad = edad;
+            Fechanac = fechanac;
             Puesto = puesto;
-            Sueldoe = sueldoe;
+            Sueldo = sueldo;
         }
     }
-    class Docente : Persona //Se crea otra clase hija, en este caso la clase se trata sobre docentes
+
+    class Docente : Persona
     {
-        public string Dni //Se crean los atributos que debe tener un docente
+        protected float sueldo;
+        protected string puesto;
+        public float Sueldo //CAJA DE MEMORIA edad
         {
-            get { return Dni; }
-            set { Dni = value; }
+            get { return sueldo; } //vamos por el valor
+                                   //de la caja de texto
+            set { sueldo = value; }//lo guardamos en memoria
         }
-        public string Sueldod
+        public string Puesto //CAJA DE MEMORIA fechanacimiento
         {
-            get { return Sueldod; }
-            set { Sueldod = value; }
+            get { return puesto; } //vamos por el valor
+                                   //de la caja de texto
+            set { puesto = value; }//lo guardamos en memoria
         }
-        public Docente(string nombre, string edad, string fechadenacimiento, string sueldod, string dni) : base(nombre, edad, fechadenacimiento) //Se crean las variables para que la persona sea un docente, ademas de juntar sus variables generales las cuales son su nombre, edad, fecha de nacimiento y sueldo
+        public Docente(string nombre, int edad, string fechanac, string puesto, float sueldo)
         {
-            Dni = dni;
-            Sueldod = sueldod;
+            Nombre = nombre;
+            Edad = edad;
+            Fechanac = fechanac;
+            Puesto = puesto;
+            Sueldo = sueldo;
         }
     }
     static class Program
     {
+        /// <summary>
+        /// Punto de entrada principal para la aplicación.
+        /// </summary>
         [STAThread]
         static void Main()
         {

@@ -81,7 +81,7 @@
             // 
             this.validar.BackColor = System.Drawing.Color.Lime;
             this.validar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.validar.Location = new System.Drawing.Point(47, 190);
+            this.validar.Location = new System.Drawing.Point(45, 196);
             this.validar.Name = "validar";
             this.validar.Size = new System.Drawing.Size(138, 67);
             this.validar.TabIndex = 3;
@@ -302,7 +302,7 @@
             this.es_persona.TabStop = true;
             this.es_persona.Text = "Soy una persona";
             this.es_persona.UseVisualStyleBackColor = true;
-            this.es_persona.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged_1);
+            this.es_persona.CheckedChanged += new System.EventHandler(this.es_persona_CheckedChanged);
             // 
             // Form1
             // 
