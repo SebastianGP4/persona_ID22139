@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tres_opciones = new System.Windows.Forms.GroupBox();
+            this.es_persona = new System.Windows.Forms.RadioButton();
             this.validar = new System.Windows.Forms.Button();
             this.es_un_docente = new System.Windows.Forms.RadioButton();
             this.es_alumno = new System.Windows.Forms.RadioButton();
@@ -50,19 +51,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.es_persona = new System.Windows.Forms.RadioButton();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tres_opciones.SuspendLayout();
             this.informacion.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(300, 300);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // tres_opciones
             // 
@@ -71,11 +64,24 @@
             this.tres_opciones.Controls.Add(this.es_un_docente);
             this.tres_opciones.Controls.Add(this.es_alumno);
             this.tres_opciones.Controls.Add(this.es_empleado);
-            this.tres_opciones.Location = new System.Drawing.Point(318, 12);
+            this.tres_opciones.Location = new System.Drawing.Point(328, 12);
             this.tres_opciones.Name = "tres_opciones";
-            this.tres_opciones.Size = new System.Drawing.Size(222, 300);
+            this.tres_opciones.Size = new System.Drawing.Size(222, 275);
             this.tres_opciones.TabIndex = 1;
             this.tres_opciones.TabStop = false;
+            // 
+            // es_persona
+            // 
+            this.es_persona.AutoSize = true;
+            this.es_persona.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.es_persona.Location = new System.Drawing.Point(7, 137);
+            this.es_persona.Name = "es_persona";
+            this.es_persona.Size = new System.Drawing.Size(211, 33);
+            this.es_persona.TabIndex = 4;
+            this.es_persona.TabStop = true;
+            this.es_persona.Text = "Soy una persona";
+            this.es_persona.UseVisualStyleBackColor = true;
+            this.es_persona.CheckedChanged += new System.EventHandler(this.es_persona_CheckedChanged);
             // 
             // validar
             // 
@@ -145,7 +151,7 @@
             this.informacion.Controls.Add(this.label3);
             this.informacion.Controls.Add(this.label2);
             this.informacion.Controls.Add(this.label1);
-            this.informacion.Location = new System.Drawing.Point(12, 329);
+            this.informacion.Location = new System.Drawing.Point(12, 306);
             this.informacion.Name = "informacion";
             this.informacion.Size = new System.Drawing.Size(367, 242);
             this.informacion.TabIndex = 2;
@@ -192,6 +198,7 @@
             this.nombre_completo.Name = "nombre_completo";
             this.nombre_completo.Size = new System.Drawing.Size(200, 20);
             this.nombre_completo.TabIndex = 11;
+            this.nombre_completo.TextChanged += new System.EventHandler(this.nombre_completo_TextChanged);
             // 
             // salir
             // 
@@ -291,35 +298,32 @@
             this.label1.Text = "Nombre completo";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // es_persona
+            // pictureBox1
             // 
-            this.es_persona.AutoSize = true;
-            this.es_persona.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.es_persona.Location = new System.Drawing.Point(7, 137);
-            this.es_persona.Name = "es_persona";
-            this.es_persona.Size = new System.Drawing.Size(211, 33);
-            this.es_persona.TabIndex = 4;
-            this.es_persona.TabStop = true;
-            this.es_persona.Text = "Soy una persona";
-            this.es_persona.UseVisualStyleBackColor = true;
-            this.es_persona.CheckedChanged += new System.EventHandler(this.es_persona_CheckedChanged);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 17);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(299, 283);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Menu;
-            this.ClientSize = new System.Drawing.Size(552, 606);
+            this.ClientSize = new System.Drawing.Size(562, 606);
             this.Controls.Add(this.informacion);
             this.Controls.Add(this.tres_opciones);
             this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tres_opciones.ResumeLayout(false);
             this.tres_opciones.PerformLayout();
             this.informacion.ResumeLayout(false);
             this.informacion.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
