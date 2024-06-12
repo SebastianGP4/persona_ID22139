@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 using System.Xml.Linq;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
@@ -23,12 +24,12 @@ namespace clase_persona_herencia
         {
             string rutaImagen = "C:\\Users\\LENOVO\\Documents\\DASC\\Semestre 4\\Programación orientada a objetos 2\\POOM2_SGP\\clase_persona_herencia\\imagenes\\Empleado.png";
             pictureBox1.BackgroundImage = Image.FromFile(rutaImagen);
-            label4.Visible = true;
-            dni_matricula.Visible = true;
-            label5.Visible = true;
-            carrera_puesto.Visible = true;
-            label6.Visible = true;
-            sueldo.Visible = true;
+            label4.Visible = false;
+            dni_matricula.Visible = false;
+            label5.Visible = false;
+            carrera_puesto.Visible = false;
+            label6.Visible = false;
+            sueldo.Visible = false;
         }
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
@@ -66,27 +67,44 @@ namespace clase_persona_herencia
 
         private void salir_Click(object sender, EventArgs e)
         {
-            Application.Exit(); //En el botón de salir hace que cierre la aplicación
+            if (MessageBox.Show("¿Deseas salir de la aplicación?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+            {
+                this.Close(); //En el botón de salir hace que cierre la aplicación
+            }
         }
 
         private void guardar_Click(object sender, EventArgs e)
         {
             if (es_alumno.Checked)
             {
-                this.FormBorderStyle = FormBorderStyle.Fixed3D;
                 this.Icon = new Icon("C:\\Users\\LENOVO\\Downloads\\figuras_ID22139-main\\Figuras_Geometricas\\FigurasImagenes\\palomita.ico");
                 MessageBox.Show("DATOS GUARDOS" + "\nNombre: " + nombre_completo.Text + "\nFecha de Nac: " + fecha_de_nacimiento.Text
                 + "\nEdad: " + edad.Text + "\nMatricula: " + dni_matricula.Text + "\nCarrera: " + carrera_puesto.Text);
+                string nombre = nombre_completo.Text;
+                string fecha = fecha_de_nacimiento.Text;
+                int eedad = Convert.ToInt32(edad.Text);
+                int matricula = Convert.ToInt32(dni_matricula.Text);
+                string carrera = carrera_puesto.Text;
+                Alumno alumno = new Alumno(nombre, eedad, fecha, carrera, matricula);
+                alumno.GuardarInfo();
             }
             else
             {
                 if (es_un_docente.Checked || es_empleado.Checked)
                 {
-                    this.FormBorderStyle = FormBorderStyle.Fixed3D;
                     this.Icon = new Icon("C:\\Users\\LENOVO\\Downloads\\figuras_ID22139-main\\Figuras_Geometricas\\FigurasImagenes\\palomita.ico");
                     
                     MessageBox.Show("DATOS GUARDOS" + "\nNombre: " + nombre_completo.Text + "\nFecha de Nac: " + fecha_de_nacimiento.Text
               + "\nEdad: " + edad.Text + "\nDNI: " + dni_matricula.Text + "\nPuesto: " + carrera_puesto.Text + "\nSueldo: " + sueldo.Text);
+                    string nombre = nombre_completo.Text;
+                    string fecha = fecha_de_nacimiento.Text;
+                    int eedad = Convert.ToInt32(edad.Text);
+                    int matricula = Convert.ToInt32(dni_matricula.Text);
+                    string puesto = carrera_puesto.Text;
+                    float sueld = Convert.ToInt32(sueldo.Text);
+                    string carrera = carrera_puesto.Text;
+                    Alumno alumno = new Alumno(nombre, eedad, fecha, carrera, matricula);
+                    alumno.GuardarInfo();
                 }
                 else
                 {
@@ -109,6 +127,8 @@ namespace clase_persona_herencia
                 int mat = Convert.ToInt32(dni_matricula.Text);
                 string carrera = carrera_puesto.Text;
                 Alumno alumno = new Alumno(nom, eda, fech, carrera, mat);
+                alumno.GuardarInfo();
+                
             }
             else
             {
@@ -121,6 +141,7 @@ namespace clase_persona_herencia
                     string puesto = carrera_puesto.Text;
                     float sueld = Convert.ToSingle(sueldo.Text);
                     Empleado empleado = new Empleado(nom, eda, fech, puesto, sueld);
+                    empleado.GuardarInfo();
                 }
                 else if (es_un_docente.Checked)
                 {
@@ -131,6 +152,7 @@ namespace clase_persona_herencia
                     string puesto = carrera_puesto.Text;
                     float sueld = Convert.ToSingle(sueldo.Text);
                     Docente docente = new Docente(nom, eda, fech, puesto, sueld);
+                    docente.GuardarInfo();
                 }
                 else
                 {

@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
 
 namespace persona_herencia
@@ -64,6 +65,25 @@ namespace persona_herencia
             Carrera = carrera;
             Matricula = matricula;
         }
+        public void GuardarInfo()
+        {
+            try
+            {
+                string filename = @"C:\Users\LENOVO\Documents\DASC\Semestre 4\Programación orientada a objetos 2\POOM2_SGP\clase_persona_herencia\clase_persona_herencia\RegistroAlumnos.txt";
+                StreamWriter writer = File.AppendText(filename);
+                writer.WriteLine("Nombre: " + Nombre);
+                writer.WriteLine("Edad: " + Edad);
+                writer.WriteLine("Fecha de nacimiento: " + Fechanac);
+                writer.WriteLine("Carrera: " + Carrera);
+                writer.WriteLine("Matricula: " + Matricula);
+                writer.WriteLine("\n");
+                writer.Close();
+            }
+            catch
+            {
+                MessageBox.Show("Error al guardar datos en el archivo: RegistroAlumnos.TXT", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
     }
 
@@ -83,14 +103,41 @@ namespace persona_herencia
                                    //de la caja de texto
             set { puesto = value; }//lo guardamos en memoria
         }
+        public int DNI
+        {
+            get { return DNI; }
 
-        public Empleado(string nombre, int edad, string fechanac, string puesto, float sueldo)
+            set { DNI = value; }
+        }
+
+        public Empleado(string nombre, int edad, string fechanac, int dni, string puesto, float sueldo)
         {
             Nombre = nombre;
             Edad = edad;
             Fechanac = fechanac;
+            DNI = dni;
             Puesto = puesto;
             Sueldo = sueldo;
+        }
+        public void GuardarInfo()
+        {
+            try
+            {
+                string filename = @"C:\Users\LENOVO\Documents\DASC\Semestre 4\Programación orientada a objetos 2\POOM2_SGP\clase_persona_herencia\clase_persona_herencia\RegistroEmpleados.txt";
+                StreamWriter writer = File.AppendText(filename);
+                writer.WriteLine("Nombre: " + Nombre);
+                writer.WriteLine("Edad: " + Edad);
+                writer.WriteLine("Fecha de nacimiento: " + Fechanac);
+                writer.WriteLine("DNI: " + DNI);
+                writer.WriteLine("Puesto: " + Puesto);
+                writer.WriteLine("Sueldo: " + Sueldo);
+                writer.WriteLine("\n");
+                writer.Close();
+            }
+            catch
+            {
+                MessageBox.Show("Error al guardar datos en el archivo: RegistroEmpleados.TXT", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 
@@ -110,13 +157,40 @@ namespace persona_herencia
                                    //de la caja de texto
             set { puesto = value; }//lo guardamos en memoria
         }
-        public Docente(string nombre, int edad, string fechanac, string puesto, float sueldo)
+        public int DNI
+        {
+            get { return DNI; }
+
+            set { DNI = value; }
+        }
+        public Docente(string nombre, int edad, string fechanac, int dni, string puesto, float sueldo)
         {
             Nombre = nombre;
             Edad = edad;
             Fechanac = fechanac;
+            DNI = dni;
             Puesto = puesto;
             Sueldo = sueldo;
+        }
+        public void GuardarInfo()
+        {
+            try
+            {
+                string filename = @"C:\Users\LENOVO\Documents\DASC\Semestre 4\Programación orientada a objetos 2\POOM2_SGP\clase_persona_herencia\clase_persona_herencia\RegistroDocentes.txt";
+                StreamWriter writer = File.AppendText(filename);
+                writer.WriteLine("Nombre: " + Nombre);
+                writer.WriteLine("Edad: " + Edad);
+                writer.WriteLine("Fecha de nacimiento: " + Fechanac);
+                writer.WriteLine("DNI: " + DNI);
+                writer.WriteLine("Puesto: " + Puesto);
+                writer.WriteLine("Sueldo: " + Sueldo);
+                writer.WriteLine("\n");
+                writer.Close();
+            }
+            catch
+            {
+                MessageBox.Show("Error al guardar datos en el archivo: RegistroDocentes.TXT", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
     static class Program

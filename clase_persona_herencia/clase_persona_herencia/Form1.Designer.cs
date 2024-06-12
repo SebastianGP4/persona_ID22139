@@ -59,6 +59,7 @@
             // 
             // tres_opciones
             // 
+            this.tres_opciones.BackColor = System.Drawing.Color.Gold;
             this.tres_opciones.Controls.Add(this.es_persona);
             this.tres_opciones.Controls.Add(this.validar);
             this.tres_opciones.Controls.Add(this.es_un_docente);
@@ -136,6 +137,7 @@
             // 
             // informacion
             // 
+            this.informacion.BackColor = System.Drawing.Color.Orange;
             this.informacion.Controls.Add(this.sueldo);
             this.informacion.Controls.Add(this.carrera_puesto);
             this.informacion.Controls.Add(this.dni_matricula);
@@ -300,6 +302,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pictureBox1.Location = new System.Drawing.Point(12, 17);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(299, 283);
@@ -311,14 +314,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Menu;
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(562, 606);
             this.Controls.Add(this.informacion);
             this.Controls.Add(this.tres_opciones);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Registro de personas";
             this.tres_opciones.ResumeLayout(false);
             this.tres_opciones.PerformLayout();
             this.informacion.ResumeLayout(false);
